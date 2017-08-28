@@ -22,7 +22,7 @@
 //   this.elements = function() {
 //     var element = document.getElementsByClassName('inputValue');
 //     var title = document.getElementsByClassName('inputText');
-//     for (i = 0; i <= 2; i++) {
+//     for (i = 0; i <= element.length; i++) {
 //       title[i].innerHTML = element[i].value;
 //       console.log(title[i]);
 //     }
@@ -35,10 +35,14 @@
 // btn.onclick = function() {
 //   product.elements();
 //   card[0].style.display = 'block';
-//   for (i = 0; i <= 2; i++) {
+//   for (i = 0; i <= element.length; i++) {
 //     document.getElementsByClassName('inputValue')[i].value = ("");
 //   }
 // }
+
+
+
+
 
 function clientFile(titre, accroche, description) {
   this.titre = titre;
@@ -46,4 +50,18 @@ function clientFile(titre, accroche, description) {
   this.description = description;
 }
 
-// var info = new clientFile();
+function getText() {
+  this.text = function() {
+    var card = new clientFile($("#titre").val(), $("#accroche").val(), $("#description").val());
+  }
+}
+
+
+// function showText() {
+//   var card = new clientFile();
+//   card.text();
+//   card[0].style.display = 'block';
+//   for (i = 0; i <= inputValue.length; i++) {
+//     inputValue[i].value = ("");
+//   }
+// }
