@@ -41,7 +41,8 @@
 // }
 
 
-
+var tabContent = [];
+var index = 0;
 
 
 function clientFile(titre, accroche, description) {
@@ -50,18 +51,21 @@ function clientFile(titre, accroche, description) {
   this.description = description;
 }
 
-function getText() {
-  this.text = function() {
+function element() {
+  this.getText = function() {
     var card = new clientFile($("#titre").val(), $("#accroche").val(), $("#description").val());
+    tabContent.push(card);
+  }
+  this.addText = function() {
+    $('.fileProduct').append("<div class='productContent'><h1>Fiche produit</h1><p class='content'>" + tabContent[index].titre + " </p> <p class = 'content'> " + tabContent[index].accroche + "  </p><p class='content'>" + tabContent[index].description + " </p></div>")
+    index++;
   }
 }
 
 
-// function showText() {
-//   var card = new clientFile();
-//   card.text();
-//   card[0].style.display = 'block';
-//   for (i = 0; i <= inputValue.length; i++) {
-//     inputValue[i].value = ("");
-//   }
-// }
+
+$("#send").click(function() {
+  var showText = new element();
+  showText.getText();
+  showText.addText();
+})
