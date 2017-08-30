@@ -1,22 +1,4 @@
-// var produit = function () {
-//   this.name = "",
-//   this.accroche = "",
-//   this.description = "",
-//   getInfo=function() {
-//     produit.getElementsByTagName("input")['titre'].value = this.name + " " + this.accroche + " " + this.description;
-//   };
-// }
-
-// var produit = document.getElementById("send");
-// produit.addEventListener("click", function() {
-//   alert("clic");
-// });
-
-// document.getElementById('send').click (function(){
-//
-// });
-
-
+// first way
 
 // function Form() {
 //   this.elements = function() {
@@ -40,6 +22,9 @@
 //   }
 // }
 
+
+
+// second way
 
 var tabContent = [];
 var index = 0;
